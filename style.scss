@@ -1,0 +1,112 @@
+@import "memory.scss";
+
+@mixin theme($theme: Greyshadow) {
+    -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    box-shadow: 10px 10px 15px -4px $couleur-gris;
+}
+
+header {
+    h1 { 
+        color: $couleur-rose;
+        text-align: center;}
+}
+
+body {
+    font: 100% "Space Mono", monospace;
+    color: #6b717f;
+    margin: 0;
+    padding:$padding-all;
+    background-color: #fff;
+    overflow-x: hidden;
+
+    main {
+        padding: $padding-all;
+        padding-top:0px ;
+        padding-bottom:0px;
+    }
+        h2 {
+            color: $couleur-rose;
+        }
+        article {
+            display: flex;
+            flex-wrap: wrap;
+        }
+             section {
+                flex-grow: 1;
+                flex-basis: 45%;
+                border: 1px $couleur-gris solid;
+                @include theme($theme: Greyshadow);
+                padding: $padding-all;
+                margin: 16px;
+                clear: both;
+                overflow: auto;
+                box-sizing: border-box;
+            }
+                #selling-points {
+                    flex-grow: 2;
+                    flex-basis: 100%;
+                }
+            
+            code {
+                background: #000;
+                border: 1px solid $couleur-gris;
+                color: $couleur-bordure;
+                page-break-inside: avoid;
+                font-family: monospace;
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 1.6em;
+                max-width: 100%;
+                overflow: auto;
+                padding:$padding-all;
+                display: block;
+                word-wrap: break-word;
+            }
+                    &.before {
+                        float: left;
+                        width: 40%;
+                    }
+                    
+                    &.after {
+                        float: right;
+                        width: 40%;
+                    }
+                    .messages {
+                        padding: $padding-all;
+                    }
+                    
+                   
+                    
+                    .success {
+                        @extend %message;
+                        background-color:$couleur-vert;
+                    }
+                    
+                    .error {
+                        @extend %message;
+                        background-color:$couleur-rouge;
+                    }
+                    
+                    .warning {
+                        @extend %message;
+                        background-color:$couleur-orange;
+                    }
+                    .error:hover {
+                        background-color:$couleur-vert;
+                    }
+        }
+footer {
+    h3 {
+        color: $couleur-rose;
+        text-align: center;
+        font-size: 1.5em;
+        padding: $padding-all*2;
+        margin-bottom: 0px;
+
+    }
+}
+
+
+
+

@@ -1,0 +1,15 @@
+$couleur-blanc: #fff;
+$couleur-gris: #6b717f;
+$couleur-rose: #BF4080;
+$couleur-bordure: #8C8C8C;
+$couleur-noir: #000;
+$couleur-orange: orange;
+$couleur-rouge: red;
+$couleur-vert: green;
+$padding-all: 12px;
+
+%message {
+    border: 1px solid #8C8C8C;
+    padding: 16px;
+    color: #fff;
+}
